@@ -1,8 +1,7 @@
 ---
 layout: post
 title: D3D-粒子系统
-categories:
-- 游戏研发
+categories: "游戏研发"
 tags: 
 - D3D
 type: post
