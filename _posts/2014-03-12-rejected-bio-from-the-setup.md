@@ -5,7 +5,7 @@ title: Rejected Bio from The Setup
 
 {{ page.title }}
 ================
-
+<p id="tagline">ssssssssssssssssssssssss</p>
 <p class="meta">03 May 2011 - San Francisco</p>
 
 Yesterday, [the autobiographical post I wrote for The
