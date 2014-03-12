@@ -13,12 +13,21 @@ category: "技术"
 
 - 技术简洁优雅。
 - 可以使用markdown写博客。
+- 修改博客极其方便，只要修改md文件然后同步即可。
 - 不怕内容丢失，因为本地会存放一个站点。
 - 可以将更多的精力和时间放在写博客上，而不是倒腾博客网站
 
 当然，也有一些缺点：
 - 静态，无法实现复杂的一些功能。
 
+
+本文的读者需要具备的知识：
+
+- 基本的html语法
+- 曾搭建过网站
+- 基本的git&github操作
+
+如果你还不会使用github，请看教程：http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 
 ##静态博客的运行机制
 什么叫静态博客网站。
@@ -38,4 +47,84 @@ jekyll是一个程序，它可以根据配置将md等文件解析为html文件�
 幸运的是，github pages支持jekyll，因此如果不需要在本地构建一个静态网站，可以把第2步和第3步合为一步，将jekyll处理前的文件夹push到github pages空间里面，github pages自动会转为静态页面供用户访问。
 
 ##安装jekyll
-jekyll是用于将md文件解析为一个完整的静态网站，解析结束以后，这个静态网站在本地已经可以访问
+jekyll是用于将md文件解析为一个完整的静态网站，解析结束以后，这个静态网站在本地已经可以访问。
+
+因为github pages支持jekyll，这一步其实是不需要的，我们只要把md文件push到github pages对应的工程里面，github会帮我们解析。
+
+这一步我一直看其他的文章都会写应该怎么安装，但是我觉得这一块写了反而误导广大人民群众。所以，我不把jekyll的安装写到这篇文章里面，大家只要知道github pages背后有一个jekyll支持就好了。
+
+安装jekyll是为了在本地也搭建一个静态博客网站，以后会写怎么做，但是大家现在只要知道：github pages自动将你的md文件转为html文件就好了。
+
+大家还可能会疑问，github怎么知道我们那些文件是需要jekyll解析的，哪些不是呢？因为jekyll的文件夹和文件都以下划线`-`开头，遇到了这种就是用jekyll处理，其他的文件和文件夹就按照静态文件处理。
+
+```
+
+//TODO:jekyll安装步骤
+
+```
+##创建一个github pages工程
+
+github pages有两种模式：个人或公司站点，project pages项目站点。
+
+一般我们使用第一个，我这里也只介绍第一个。
+
+###第一步：创建个人站点
+注意，这种站点必须符合这样的规则：username/username.github.com；而且，每个用户名下面只能建立一个。
+
+![](/images/2014-3-12-jekyll-blog-install-1.png)
+
+###第二步：设置站点主题
+进入资源-setting
+![进入资源-setting](/images/2014-3-12-jekyll-blog-install-2.png)
+
+更新你的站点
+![](\images\2014-3-12-jekyll-blog-install-3.png)
+
+
+最后选择主题并发布。
+
+由于我创建工程的时候没有截图，图片来源：http://www.cnblogs.com/purediy/archive/2013/03/07/2948892.html
+
+##创建一个符合jekyll规则的文件夹并同步到github pages工程
+我们现在已经在github端创建了一个空间，现在只要在本地创建一个符合jekyll规范的文件夹，并且使其与github pages工程同步。从此以后，你只要在本地写md文件，然后同步到github pages工程上去。
+
+我创建的github pages工程为：git@github.com:shinepengwei/shinepengwei.github.io.git
+
+步骤如下：
+
+1 创建一个文件夹。
+
+2 进入这个文件夹，然后把创建的shinepengwei.github.io工程clone下来：
+
+```
+git clone git@github.com:shinepengwei/shinepengwei.github.io.git
+
+```
+
+3 创建一个符合jekyll规范的文件夹。这一步可以通过clone一个现有的github pages博客的文件，clone下来以后，修改下_config.yml的配置参数，然后把文件复制到shinepengwei.github.io里面。
+
+注意：不要把clone下来的工程里面的.git文件夹复制进去。
+
+我们这一步clone下来一个jekyll主题的源文件。
+
+```
+git clone git@github.com:pizn/kunka.git
+```
+
+_posts文章可以不删除，不影响使用。但是_config.yml配置文件需要修改url参数，代表着网站的url地址。
+
+```
+url: http://shinepengwei.github.io/
+```
+
+4 同步shinepengwei.github.io工程。通过以上三步，本地的shinepengwei.github.io工程下面应该已经包含了jekyll所需要的所有文件，现在使用git同步上去即可。
+```
+git add .
+git commit -m"my blog"
+git push
+```
+
+##写博客
+写博客我一般使用markdown格式，写完了以后就是md文件。将文件放在_posts文件夹里面，文件名要求为“year-month-day-title.md”。
+
+然后再同步到github的shinepengwei.github.io工程上即可。
