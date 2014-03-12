@@ -3,7 +3,7 @@ layout: post
 title:  基于jekyll在github pages安装静态博客
 date:   2014-03-12 13:46:11
 category: "编程"
-tag: "git"
+tag: "git&github"
 ---
 
 我之前一直使用wordpress作为博客系统，但是wordpress臃肿的架构让我厌烦，而且由于对PHP不熟悉，无法获得随心所欲的感觉。
