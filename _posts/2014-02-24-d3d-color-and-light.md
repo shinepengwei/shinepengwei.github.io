@@ -1,11 +1,8 @@
 ---
 layout: post
-title: 颜色与光照
-categories:
-- 游戏研发
-tags: 
-- D3D
-type: post
+title: D3D-颜色与光照
+category: "游戏研发"
+tag:  "D3D"
   
 ---
 
@@ -43,6 +40,7 @@ D3D关照模型包括四种光照效果：环境光、漫反射光、镜面反�
 - D3DMCS_FORCE_DWORD：一般不用
 
 ###3.镜面反射
+
 可以通过`pd3dDevice->SetRenderState(D3DRS_SPECULARENABLE,TRUE)`开启镜面反射，一般不开启，因为计算量比较大。
 
 ###4.自发射光
@@ -51,8 +49,10 @@ D3D关照模型包括四种光照效果：环境光、漫反射光、镜面反�
 ##材质
 物体的颜色由他的反射属性属性决定。*之所以一个球是红色的，因为他对红色的光放射的最多。*材质从本质上来说和顶点的颜色属性是一样的，但是在灵活顶点格式FVF中职能设置漫反射光和镜面反射光，而对于环境光和自发射光属性，必须通过材质属性设置。
 
-材质的定义通过D3DMaterial9结构体。
+材质的定义通过D3DMaterial9结构体
+
 ```
+
 	ypedef struct D3DMATERIAL9 {
 	    D3DCOLORVALUE Diffuse;
 	    D3DCOLORVALUE Ambient;
@@ -61,6 +61,7 @@ D3D关照模型包括四种光照效果：环境光、漫反射光、镜面反�
 	    float Power;
 	} D3DMATERIAL9, *LPD3DMATERIAL9;
 ```
+
 Diffuse－指定表面反射的漫反射光。
 Ambient－指定表面反射的环境光。
 Specular－指定表面反射的镜面光。
@@ -68,18 +69,22 @@ Emissive－表面本身自发光。
 Power －镜面高光，它的值是高光的锐利值，该值越大表示高光强度与周围亮度相差越大。
 
 **注意，如果模型的顶点自己具有定点颜色属性，我们需要关闭定点颜色功能，这样使模型使用材质属性。**
+
 ```
 	//关闭顶点颜色属性
 	g_pd3dDevice->SetRenderState( D3DRS_COLORVERTEX, FALSE );
 
 ```
+
 也可以通过设置光照计算使用我们设置的材质：
+
 ```
 	g_pd3dDevice->SetRenderState( D3DRS_DIFFUSEMATERIALSOURCE, D3DMCS_MATERIAL );
     g_pd3dDevice->SetRenderState( D3DRS_SPECULARMATERIALSOURCE, D3DMCS_MATERIAL );
     g_pd3dDevice->SetRenderState( D3DRS_AMBIENTMATERIALSOURCE, D3DMCS_MATERIAL );
     g_pd3dDevice->SetRenderState( D3DRS_EMISSIVEMATERIALSOURCE, D3DMCS_MATERIAL );
 ```
+
 通过以上两种方法，使物体基于我们定义的材质显示颜色。
 
 如何应用材质，在绘制一个物体前，使用`pd3dDevice->SetMaterial(&p_material)`设置材质，然后绘制物体时就会使用这种材质。
@@ -127,5 +132,6 @@ Power －镜面高光，它的值是高光的锐利值，该值越大表示高�
     g_pd3dDevice->SetLight( 0, &light_0 );//设置光源0
 
 ```
+
 第二步：打开光源。渲染是，默认所有的光源都是关闭的，不起作用，如果使用需要启用他。`g_pd3dDevice->LightEnable( 0, TRUE );//启用0号光源`
 第三步：开始绘制图形。这样，所有绘制的物体都会被光照0所照射。

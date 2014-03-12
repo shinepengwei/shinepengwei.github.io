@@ -1,11 +1,8 @@
 ---
 layout: post
 title: D3D-Alpha混合
-categories:
-- 游戏研发
-tags: 
-- D3D
-type: post
+category: "游戏研发"
+tag:  "D3D"
 
 ---
 
@@ -25,15 +22,21 @@ Alpha混合规则可以用以下公式表示：
 混合系数以及混合操作都通过`SetRenderState()`函数设置。
 
 一般来说，将src(k)设置为`D3DBLEND_SRCALPHA`,将dst(k)设置为`D3DBLEND_INVSRCALPHA`,将OP设置为`D3DBLEND_ADD`,这样，公式就可以写为：
- `COLOR=(src(RGB)*src(Alpha)) OP (dst(RGB)*(1-src(Alpha)))`
+
+```
+ COLOR=(src(RGB)*src(Alpha)) OP (dst(RGB)*(1-src(Alpha))
+```
 
 ##Alpha混合使用方法
 由于Alpha混合耗费较多的计算资源，默认状态下，Alpha混合功能时关闭的，要使用Alpha混合首先开启。
 
-`pd3dDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, true);`
+```
+pd3dDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, true);
+```
 
 根据上一节混合规则所说，我们要设置混合系数以及混合操作。
 设置混合系数：
+
 ```
 m_pd3dDevice->SetRenderState(D3DRS_SRCBLEND, XX);
 m_pd3dDevice->SetRenderState(D3DRS_DESTBLEND, XX);
@@ -42,7 +45,10 @@ m_pd3dDevice->SetRenderState(D3DRS_DESTBLEND, XX);
 混合系数的枚举值可参考：http://msdn.microsoft.com/en-us/library/windows/desktop/bb172508.aspx
 
 混合操作默认为相加`D3DBLEND_ADD`,也可以改为相减、最大值、最小值。
-`pd3dDevice->SetRenderState(D3DRS_BLENDOP, D3DBLEND_ADD);`
+
+```
+pd3dDevice->SetRenderState(D3DRS_BLENDOP, D3DBLEND_ADD);
+```
 
 ##使用场景和实例
 我们在雪花绘制的粒子系统中使用到了Alpha混合，当对雪花进行纹理贴图时，我们希望把纹理图的黑色边缘去掉，这时就可以使用Alpha混合。
@@ -52,6 +58,7 @@ m_pd3dDevice->SetRenderState(D3DRS_DESTBLEND, XX);
 ![](http://img.my.csdn.net/uploads/201304/01/1364751287_7662.jpg)
 
 我们可以把源混合系数目标混合系数都设为一，因为黑色的RGB为000，混合以后黑色就变为透明。
+
 ```
 	m_pd3dDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, true);//打开Alpha混合
     m_pd3dDevice->SetRenderState(D3DRS_SRCBLEND, D3DBLEND_ONE);//源混合系数设为1

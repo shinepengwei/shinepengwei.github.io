@@ -1,11 +1,8 @@
 ---
 layout: post
 title: D3D-索引缓冲
-categories:
-- 游戏研发
-tags: 
-- D3D
-type: post
+category: "游戏研发"
+tag:  "D3D"
 
 ---
 
