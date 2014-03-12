@@ -1,18 +1,9 @@
 ---
 layout: post
 title: Const深入解析
-categories:
-- C++
-- 技术
-- 编程
+category: "编程"
 tags:
 - C++
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _wp_old_slug: const%e6%b7%b1%e5%85%a5%e8%a7%a3%e6%9e%90-3
 ---
 Const关键词的引入主要是为了区分什么可以修改，什么不可以修改。同时，它可以保证代码的安全性并提供访问控制保证。C中使用#define进行值替换，const可以提供这种功能，但是不仅仅限于如此简单的应用。它还可以通过对指针、函数参数、返回值、类和成员函数的修饰，对其进行控制和说明。尽可能使用const是一种良好的代码风格，因为它可以保证减少bug。
 
