@@ -1,8 +1,9 @@
 ---
 layout: post
 title: 整数表示-signed和unsigned
-category:"编程"
+category: "编程"
 ---
+
 本文介绍了C语言中int数据类型的存储，以及signed和unsigned类型的区别和联系。
 
 <h1>二进制补码编码</h1>
