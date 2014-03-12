@@ -1,16 +1,8 @@
 ---
 layout: post
 title: 编译和链接-目标文件格式
-categories:
-- 技术
-- 编程
-tags: []
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _wp_old_slug: ! '%e7%bc%96%e8%af%91%e5%92%8c%e9%93%be%e6%8e%a5-%e7%9b%ae%e6%a0%87%e6%96%87%e4%bb%b6%e6%a0%bc%e5%bc%8f'
+category:"编程"
+tag: "编译和连接"
 ---
 <p><span style="font-size:10pt">目标文件是编译器编译源代码后生成的文件，从结构上讲，它具有可执行文件的文件格式，但是没有经过连接过程，因此对于其他编译模块的引用还没有连接上，本文将简单介绍目标文件的文件格式，对目标文件格式的理解是下文介绍静态链接和动态链接的基础。
 </span></p><h1>可执行文件格式类型
@@ -54,17 +46,4 @@ meta:
 </span></p><p><span style="font-size:10pt">符号表一般是ELF文件的一个段.symtab。每个符号有一个结构，存储的信息包括：符号名、符号值、符号大小、符号类型和绑定信息，符号所在段。
 </span></p><p><span style="font-size:10pt">其中，符号类型有：
 </span></p><div><table style="border-collapse:collapse" border="0"><colgroup><col style="width:369px"/><col style="width:369px"/></colgroup><tbody valign="top"><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  solid black 0.5pt; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">NOTTYPE</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  solid black 0.5pt; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">未知符号类型</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">OBJECT</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">数据对象，如变量、数组</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">FUNC</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">函数</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">SECTION</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">段</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">FILE</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">文件名。</span></p></td></tr></tbody></table></div><p><span style="font-size:10pt">绑定信息有
-</span></p><div><table style="border-collapse:collapse" border="0"><colgroup><col style="width:369px"/><col style="width:369px"/></colgroup><tbody valign="top"><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  solid black 0.5pt; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">LOCAL</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  solid black 0.5pt; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">局部符号</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">GLOBAL</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">全局符号</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">WEAK</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">弱引用</span></p></td></tr></tbody></table></div><p>
-?</p><p>
-?</p><p>
-?</p><p>
-?</p><p>
-?</p><p>
-?</p><p>
-?</p><p>
-?</p><p>
-?</p><p>
-?</p><p>
-?</p><p>
-?</p><p><span style="font-size:10pt">
-		</span>?</p>
+</span></p><div><table style="border-collapse:collapse" border="0"><colgroup><col style="width:369px"/><col style="width:369px"/></colgroup><tbody valign="top"><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  solid black 0.5pt; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">LOCAL</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  solid black 0.5pt; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">局部符号</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">GLOBAL</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">全局符号</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">WEAK</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">弱引用</span></p></td></tr></tbody></table></div>

@@ -1,15 +1,7 @@
 ---
 layout: post
 title: 整数表示-signed和unsigned
-categories:
-- 技术
-tags: []
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _wp_old_slug: ! '%e6%95%b4%e6%95%b0%e8%a1%a8%e7%a4%ba-signed%e5%92%8cunsigned'
+category:"编程"
 ---
 本文介绍了C语言中int数据类型的存储，以及signed和unsigned类型的区别和联系。
 <h1>二进制补码编码</h1>

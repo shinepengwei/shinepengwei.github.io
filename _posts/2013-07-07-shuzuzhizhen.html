@@ -1,17 +1,8 @@
 ---
 layout: post
 title: 数组和指针
-categories:
-- C++
-- 技术
-- 编程
-tags: []
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _wp_old_slug: ! '%e6%95%b0%e7%bb%84%e5%92%8c%e6%8c%87%e9%92%88'
+category:"编程"
+tag: "C++"
 ---
 <p>数组和指针在一定程度上可以互相使用，但是从本质上来说，他们是有本质的区别的。
 </p><h2>X=Y的本质
@@ -41,10 +32,9 @@ meta:
 </p><p>步骤2：取i的值，将其与9980相加。
 </p><p>步骤3：取地址为（9980+i）的内容。
 </p><p><strong>三步读内存过程。
-</strong></p><p>
-?</p><h2>数组和指针的区别
+</strong></p><h2>数组和指针的区别
 </h2><div><table style="border-collapse:collapse" border="0"><colgroup><col style="width:355px"/><col style="width:355px"/></colgroup><tbody valign="top"><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  solid black 0.5pt; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">指针</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  solid black 0.5pt; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">数组</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">保存数据的地址</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">直接保存数据</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">间接访问数据。首先取指针内容，然后将其作为地址再去取数据。</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">直接访问数据。根据数组的地址。</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">通常用于动态数据结构-堆，当然，指向数组也可以。</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">存储固定数目且数据类型相同的数据，一般是放在栈里面作为临时变量。</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">使用malloc、free为其分配内存。</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">隐式分配、删除</span></p></td></tr><tr><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  solid black 0.5pt; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">指向匿名数据</span></p></td><td style="padding-left: 9px; padding-right: 9px; border-top:  none; border-left:  none; border-bottom:  solid black 0.5pt; border-right:  solid black 0.5pt"><p><span style="font-size:10pt">本身就是数据，数组名就是数据的名字</span></p></td></tr></tbody></table></div><p>
-?</p><p>数组和指针在定义时都可以用字符串常量对其初始化，但是底层机制不同。
+</p><p>数组和指针在定义时都可以用字符串常量对其初始化，但是底层机制不同。
 </p><p>定义指针时，编译器为指针分配空间，创建的字符串常量是只读的，并将其地址存放在指针变量中，因此不能对其进行修改。
 </p><p>而通过字符串常量初始化数组，会将每个字符存入到编译器为数组分配的内存空间里面，也就是可以修改的。
 </p><h2>数组和指针的使用
@@ -54,9 +44,8 @@ meta:
 </div></li><li><div style="text-align: justify">函数参数：f(char a[])；数组形式或指针形式都可以
 </div></li></ul><p>表达式中的使用：
 </p><ul><li><div style="text-align: justify">如c=a[i];数组或指针形式都可以。
-</div></li></ul><p>
-?</p><p>
-?</p><h2>数组和指针的可交换性
+</div></li></ul>
+<h2>数组和指针的可交换性
 </h2><p>什么时候数组和指针是相同的，C语言标准中做出了一下的说明：
 </p><ul><li><div style="text-align: justify">表达式中的数组名被编译器当作一个指向该数组第一个元素的指针。
 </div></li><li><div style="text-align: justify">C语言把下标作为指针的偏移量。
