@@ -78,7 +78,7 @@ github pages有两种模式：个人或公司站点，project pages项目站点�
 ![进入资源-setting](/images/2014-3-12-jekyll-blog-install-2.png)
 
 更新你的站点
-![](\images\2014-3-12-jekyll-blog-install-3.png)
+![](/images/2014-3-12-jekyll-blog-install-3.png)
 
 
 最后选择主题并发布。
