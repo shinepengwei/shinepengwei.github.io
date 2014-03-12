@@ -20,7 +20,9 @@ type: post
 比如，我们要创建一个正方体，如果使用普通的顶点缓冲，我们需要24（4*6，一个正方形使用4个定点，使用D3DPT_TRIANGLESTRIP图元）个顶点。而如果使用索引缓冲，在顶点缓冲区中只需要存储8个顶点。
 
 这一步和上一节中的创建顶点缓冲区的方法相同。
+
 ```
+
 	Vertex g_cubeVertices_indexed[] =
 	{
 		{-1.0f, 1.0f,-1.0f,  D3DCOLOR_COLORVALUE( 1.0, 0.0, 0.0, 1.0 ) }, // 0
@@ -43,12 +45,14 @@ type: post
 	memcpy( pVertices, g_cubeVertices_indexed, sizeof(g_cubeVertices_indexed) );
 	g_pVertexBuffer_Indexed->Unlock();
 
+
 ```
 
 ##创建索引缓冲区
 在索引缓冲区内，存储的是顶点编号，使用CreateIndexBuffer函数创建索引缓冲。
 
 ```
+
 	WORD g_cubeIndices[] =
 	{
 		0, 1, 2, 3, // Quad 0
@@ -69,11 +73,14 @@ type: post
 	g_pIndexBuffer->Lock( 0, sizeof(g_cubeIndices), (void**)&pIndices, 0 );
 	memcpy( pIndices, g_cubeIndices, sizeof(g_cubeIndices) );
 	g_pIndexBuffer->Unlock();
+
 ```
 ##通过索引缓冲绘制几何体
 首先设置顶点缓冲，然后设置索引缓冲，然后设置FVF，最后通过DrawIndexedPrimitive函数绘制图形。
 [DrawIndexedPrimitive函数官方文档](http://msdn.microsoft.com/en-us/library/windows/desktop/bb174369.aspx)
+
 ```
+
 	HRESULT DrawIndexedPrimitive(
 		[in]  D3DPRIMITIVETYPE Type,//图元类型
 		[in]  INT BaseVertexIndex,
@@ -83,8 +90,11 @@ type: post
 		[in]  UINT PrimitiveCount//绘制图元的个数
 	);
 
+
 ```
+
 如绘制一个正方体
+
 ```
 	g_pd3dDevice->SetStreamSource( 0, g_pVertexBuffer_Indexed, 0, sizeof(Vertex) );
 	g_pd3dDevice->SetIndices( g_pIndexBuffer );
@@ -96,6 +106,7 @@ type: post
     g_pd3dDevice->DrawIndexedPrimitive( D3DPT_TRIANGLESTRIP, 0, 0, 8, 12, 2 );
     g_pd3dDevice->DrawIndexedPrimitive( D3DPT_TRIANGLESTRIP, 0, 0, 8, 16, 2 );
     g_pd3dDevice->DrawIndexedPrimitive( D3DPT_TRIANGLESTRIP, 0, 0, 8, 20, 2 );
+
 ```
 ##释放顶点缓冲和索引缓冲的资源
 在程序结束前，需要使用Release释放资源，一般在D3D设备资源释放前。
