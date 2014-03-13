@@ -100,7 +100,7 @@
                         <ul class="list">
                             {% assign tags_list = site.tags %}
                                 {% for tag in tags_list %}
-                                  <li class="tags-item"><a href='{{ BASE_PATH }}"tags.html"#{{ tag[0] }}-ref'">
+                                  <li class="tags-item"><a href='{{ BASE_PATH }}tags.html#{{ tag[0] }}-ref'">
                                  {{ tag[0] | join: "/" }}
                                  </a></li>
                             {% endfor %}
