@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  痕迹
+catygory: "编程"
 ---
 
 **使用Python完成Json解析器**
