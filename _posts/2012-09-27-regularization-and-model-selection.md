@@ -1,18 +1,8 @@
 ---
 layout: post
 title: 规则化和模型选择
-categories:
-- 技术
-- 机器学习
-- 计算机理论及算法
-tags:
-- 机器学习
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _wp_old_slug: ! '%e8%a7%84%e5%88%99%e5%8c%96%e5%92%8c%e6%a8%a1%e5%9e%8b%e9%80%89%e6%8b%a9'
+category: "理论及算法"
+tag: "机器学习"
 ---
 <p>目前我们已经学习了很多机器学习算法，比如线性模型、神经网络、多项式回归模型等。当我们要解决一个机器学习问题时，首先需要选择一个适合恰当的模型，有些模型还需要选择参数，比如局部加权回归中的bandwidth等。
 </p><p>问题：在有限的模型集合M=｛M1,M2,…Md｝中为问题选择一个最合适的模型Mi。

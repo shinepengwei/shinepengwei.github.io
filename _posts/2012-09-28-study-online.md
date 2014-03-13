@@ -1,18 +1,8 @@
 ---
 layout: post
 title: 在线学习
-categories:
-- 技术
-- 机器学习
-- 计算机理论及算法
-tags:
-- 机器学习
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _wp_old_slug: ! '%e5%9c%a8%e7%ba%bf%e5%ad%a6%e4%b9%a0'
+category: "理论及算法"
+tag: "机器学习"
 ---
 <p>在我们以前介绍的学习模型中，都是批量学习(batch learning)，而我们这一节将会介绍一种新的学习模型——在线学习。在线学习就是样本集成顺序出现，系统一边预测，一边学习。此节内容不属于任何模块，这里简单介绍一下。
 </p><p>正式说明如下：有顺序的样例：<img src="/wp-content/uploads/2012/09/092812_1336_1.png" alt=""/>，首先算法根据x&lt;1&gt;预测y&lt;1&gt;，然后系统获得y&lt;1&gt;值，然后根据x&lt;2&gt;…以此类推。。在在线学习中，我们感兴趣的是总错误数量，即<img src="/wp-content/uploads/2012/09/092812_1336_2.png" alt=""/>。

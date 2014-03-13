@@ -1,18 +1,8 @@
 ---
 layout: post
 title: 支持向量机
-categories:
-- 技术
-- 机器学习
-- 计算机理论及算法
-tags:
-- 机器学习
-status: publish
-type: post
-published: true
-meta:
-  _edit_last: '1'
-  _wp_old_slug: support-vector-machines%e6%94%af%e6%8c%81%e5%90%91%e9%87%8f%e6%9c%ba
+category: "理论及算法"
+tag: "机器学习"
 ---
 <h1>一 概述及问题提出</h1>
 支持向量机的原理是找到一个划分（<span style="color: red;">我们假设训练集是可分的</span>），使离这个划分几何最近的训练集元素点（称为支持向量）与划分的距离最远。本文首先介绍了支持向量机的数学计算目标，然后介绍如何通过拉格朗日对偶、kernel函数以及SMO算法有效的得出支持向量机的计算结果。其中拉格朗日对偶和SMO算法是求解支持向量机的方法，kernel是优化（或者说是快速）计算结果的一种方法。
