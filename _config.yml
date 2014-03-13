@@ -19,14 +19,15 @@ nav:
     url: /index.html
   - text: 分类目录 
     url: /categories.html
+  - text: 痕迹
+    url: /myProject.html
   - text: 标签
     url: /tags.html
   - text: 文章归档
     url: /archives.html
   - text: 联系我
     url: /contact.html
-  - text: 友情链接
-    url: /links.html
+
 
 #Author config
 author:
@@ -48,13 +49,13 @@ follow:
   - class: icon-rss
     url: /atom.xml
   - class: icon-weibo
-    url: http://weibo.com/pizn
+    url: http://weibo.com/
   - class: icon-renren
     url: http://renren.com
   - class: icon-github-alt
-    url: http://github.com/pizn
+    url: http://github.com/shinepengwei
   - class: icon-twitter
-    url: http://twitter.com/piznlin
+    url: http://twitter.com/
   - class: icon-google-plus
     url: http://google.com
 
@@ -79,7 +80,7 @@ customLinks:
 
 #googleAnaly, your id link UA-12345678-X
 googleAnaly:
-  config: true
+  config: false
   id: UA-40169250-1
 
 #comment config
@@ -89,4 +90,4 @@ disqus:
 
 duoshuo:
   config: true
-  id: zhanxin
+  id: codingart
