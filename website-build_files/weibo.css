@@ -1,0 +1,56 @@
+#weibo
+{
+list-style-type: none;
+padding: 0px;
+margin-left: 0px !important;
+}
+
+#weibo li
+{
+list-style-type: none;
+margin-bottom: 8px;
+background-image: url("http://www.codingart.info/wp-content/plugins/sina-weibo-plugin-for-wordpress/weibo.png");
+background-repeat: no-repeat;
+background-position: 0px 0px;
+padding-left: 24px;
+}
+
+#weibo a:link, #weibo a:hover, #weibo a:visited
+{
+background: none;
+border: none;
+padding: 0;
+margin: 0;
+display: inline;
+font-weight: normal;
+}
+
+#weibo a.weibo_link
+{
+margin-left: 10px;
+display: inline;
+color: orange;
+padding: 0;
+line-height: 16px;
+}
+
+#weibo a.weibo_link:hover
+{
+color: red;
+background: none;
+text-decoration: underline;
+}
+
+p.follow_me
+{
+background-image: url("http://www.codingart.info/wp-content/plugins/sina-weibo-plugin-for-wordpress/fol.png");
+background-repeat: no-repeat;
+background-position: 0px 0px;
+padding-left: 20px;
+float: right;
+}
+
+p.clear
+{
+clear: both;
+}
