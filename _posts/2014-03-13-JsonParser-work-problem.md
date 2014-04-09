@@ -3,10 +3,10 @@ layout: post
 title: Python作业问题——优化
 categories:
 - 编程
+- 项目
 tags: 
 - Python
 type: post
-
 ---
 
 网易作业成绩发下来了，额，不太好，但是我挺开心。
