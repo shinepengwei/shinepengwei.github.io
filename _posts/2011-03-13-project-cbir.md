@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  基于CBIR的商标检索
-date:   2014-03-12 13:46:11
-category: "编程"
+categories: 
+- "编程"
+- "项目"
 
 ---
 
