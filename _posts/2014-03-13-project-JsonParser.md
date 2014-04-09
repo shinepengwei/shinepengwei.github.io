@@ -2,7 +2,9 @@
 layout: post
 title:  JsonParser - Python json转换
 date:   2014-03-12 13:46:11
-category: "编程"
+categories: 
+- "编程"
+- "项目"
 tag: "Python"
 ---
 

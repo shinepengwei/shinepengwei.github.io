@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  D3D雪人场景介绍
-category: "游戏研发"
+title:  Direct3D雪人场景介绍
+categories: 
+- "游戏研发"
+- "项目"
 tag: "Direct3D"
 ---
 

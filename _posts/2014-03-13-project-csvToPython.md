@@ -1,7 +1,10 @@
 ---
 layout: post
 title:  csv导表
-category: "编程"
+categories: 
+- "编程"
+- "项目"
+
 tag: "C#"
 ---
 
