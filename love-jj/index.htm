@@ -1,0 +1,94 @@
+﻿<html>﻿
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>love涵forever</title>
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" tppabs="http://www.598443457.tk/images/favicon.ico"/>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url("digital-7_mono.ttf"/*tpa=http://youta.atwebpages.com/biaobai/digital-7_mono.ttf*/) format("truetype");
+		}
+	</style>
+	<link href="default.css" tppabs="http://www.598443457.tk/css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="jquery.js" tppabs="http://www.598443457.tk/js/jquery.js"></script>
+	<script type="text/javascript" src="garden.js" tppabs="http://www.598443457.tk/js/garden.js"></script>
+    <script type="text/javascript" src="functions.js" tppabs="http://www.598443457.tk/js/functions.js"></script>
+</head>
+
+<body>
+<div>
+<img src="qqlogo.jpg" height="100px;" style="margin-left:100px;"/>
+</div>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+<span class="comments"></span><br />
+				
+				<span class="comments">亲爱的：</span><br />
+				<span class="space"><span class="comments">见信好！</span></span><br />
+				<span class="space"/><span class="comments">还记得第一次向你表白，是在2005年的4月2号，那时候，我不懂得怎么表达自己的爱，只会说一句喜欢你，只会偷偷的注视着你，见到你就像是老鼠见了猫，心里七上八下，慌了阵脚。 9年间，我们之间断断续续的发生了很多小插曲，尽管这期间我有耍过小聪明，经常惹你生气，你不理我，甚至是...很讨厌我。但是我的心，却还是思念着你，我眷恋着你的神秘，眷恋着你所有的好，所有的坏，脉脉之情如一溪春水，快刀也难斩断。</span><br />
+				<span class="space"/><span class="comments">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						爱你第
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						姚誉涵，我爱你，一辈子不分离！<br/>
+						<div class="signature">- 项彬</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<center>
+	<img src="original_eEd9_5850000012181191.jpg"/><br><br>
+	</center>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2010, 01, 20);
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "提醒您：IE低版本用户请一边惭愧去吧^_^<br/>"+
+				"推荐使用浏览器 <a href='http://dl.pconline.com.cn/download/51614.html' target='_blank'>Chrome 14+</a>"+
+				"/<a href='http://download.microsoft.com/download/0/4/9/049A037E-B6B4-4303-90BE-BA6CAE979674/IE10-Windows6.1-x86-zh-cn.exe' target='_blank'>IE 9+</a>"+
+				"/<a href='http://download.firefox.com.cn/releases/partners/baidu/webins3.0/zh-CN/Firefox-setup.exe' target='_blank'>Firefox 7+</a>"+
+				"/Safari 4+<br/>请先升级您的浏览器，效果很炫哦~~"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				adjustWordsPosition();
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+
+	<embed src="http://www.xiami.com/widget/235018_1770538484,_235_346_FF8719_494949_1/multiPlayer.swf" type="application/x-shockwave-flash" width="1" height="1" wmode="opaque"></embed>
+	
+</body>
+</html>
