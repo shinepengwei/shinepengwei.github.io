@@ -4,9 +4,6 @@ title: 404
 ---
 <div class="article">
     <h3 class="title">{{ page.title }}</h3>
-	<p>
-		博主对博客进行了更新，从搜索引擎来的读者请从下列文章列表中查找您想看的文章。谢谢支持。
-	</p>
     <ul class="categories">
     {% assign categories_list = site.categories %}
     {% for category in categories_list %}
@@ -17,6 +14,9 @@ title: 404
     </ul>
 
 <div class="article">
+	<p>
+		博主对博客进行了更新，从搜索引擎来的读者请从下列文章列表中查找您想看的文章。谢谢支持。
+	</p>
 {% for category in site.categories %} 
   <h2  class="article-year" id="{{ category[0] }}-ref" data-year="&diams;">{{ category[0] | join: "/" }}</h2>
   <ul style="list-style: none">
