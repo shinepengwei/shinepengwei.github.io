@@ -1,9 +1,12 @@
 ---
 layout: default
-title: Categories
+title: 404
 ---
 <div class="article">
     <h3 class="title">{{ page.title }}</h3>
+	<p>
+		博主对博客进行了更新，从搜索引擎来的读者请从下列文章列表中查找您想看的文章。谢谢支持。
+	</p>
     <ul class="categories">
     {% assign categories_list = site.categories %}
     {% for category in categories_list %}
