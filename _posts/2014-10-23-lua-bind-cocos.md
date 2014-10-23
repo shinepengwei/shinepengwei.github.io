@@ -53,7 +53,9 @@ category: "游戏研发"
 
 lua和C++的交互必须通过堆栈，交互流程如下图所示：
 
-![Alt text](http://img.my.csdn.net/uploads/201212/26/1356522919_2602.jpg)
+![Alt text](http://www.codingart.info/images/201410/1356522919_2602.jpg)
+
+
 
     -- hello.lua 文件
     myName = "beauty girl"
