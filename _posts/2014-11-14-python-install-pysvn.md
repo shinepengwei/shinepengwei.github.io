@@ -22,7 +22,7 @@ tag:  "Python"
 
 坑爹有没有！！！展示下成果：
 
-![Alt text](./2014/104d4a93-31b3-455c-949e-3a4fb09a094b.png)
+![Alt text](/images/2014/104d4a93-31b3-455c-949e-3a4fb09a094b.png)
 
 
 使用easy_install直接下载安装python第三方库的方法，在第三方库注册机构没找到pysvn。
