@@ -34,9 +34,8 @@ author:
     name: 水风
     email: shinepengwei@163.com
     imageLink: http://tp2.sinaimg.cn/1832671293/180/40020872447/1
-    simpleIntro: 水风，南农、东南毕业，目前就职于网易游戏，目前从事游戏研发，希望花五到十年的时间成为全栈工程师。本博客大部分为本人原创，欢迎转载交流。
+    simpleIntro: 水风，南农、东南毕业，目前就职于网易游戏，目前从事游戏研发。本博客大部分为本人原创，欢迎转载交流。
     detailIntro:
-		
         <li>东南大学-硕士</li>
         <li>全栈工程师</li>
         <li>南京农业大学-本科</li>
@@ -46,10 +45,11 @@ author:
         <li><a href="http://www.njcoding.com">水风网络</a></li>
         <p>技术永远是一种哲学和艺术。</p>
         <p>兴趣广泛，强烈喜欢网络游戏，并从事游戏研发。</p>
-        <p>	对互联网相关的技术、运营、意识形态有着浓厚兴趣。</p>
-        <p>技术兴趣广泛，技术能力一般，光而不深，或许因为学习能力不错，目前还没拉下。</p>
+        <p>对互联网相关的技术、运营、意识形态有着浓厚兴趣。</p>
+        <p>技术兴趣广泛，技术能力一般，广而不深，或许因为学习能力不错，目前还没拉下。</p>
         <p>爱阅读，但不仅限于技术，更喜欢阅读一些社会科学、人文方面的书籍。</p>
         <p>伪极客，七分书呆子，二分二流子，一分痛苦的哲学家</p>
+        <p>五年规划：游戏研发全栈工程师</p>
 
 #Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
 follow:
@@ -69,8 +69,6 @@ follow:
 #Links
 customLinks:
   - item:
-    - text: 掌心
-      url: http://www.zhanxin.info
     - text: Jekyll
       url: http://jekyllrb.com
     - text: Jekyll Theme
@@ -79,10 +77,6 @@ customLinks:
   - item:
     - text: Font Awesome
       url: http://fortawesome.github.io/Font-Awesome/
-    - text: Google Font
-      url: http://www.google.com/fonts/
-    - text: jQuery
-      url: http://jquery.com/
     message: 其他相关链接
 
 #googleAnaly, your id link UA-12345678-X
