@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  2014
+title:  在Cocos中使用shader实现月相变化
 category: "生活随笔"
 ---
 
