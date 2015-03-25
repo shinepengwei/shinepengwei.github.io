@@ -1,3 +1,10 @@
+---
+layout: post
+title:  Lua预编译和加密
+category: "游戏研发"
+tag:  "Cocos"
+---
+
 可以使用cocos luacompile预编译lua代码，使用方法：http://www.cocos2d-x.org/wiki/Cocos_luacompile
 在windows中测试可用，使用步骤：
 1.预编译src文件夹，输出为srccompile文件夹
