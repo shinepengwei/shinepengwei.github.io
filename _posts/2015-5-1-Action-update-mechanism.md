@@ -110,8 +110,8 @@ end
 
 
 输出：
-```
 
+```
 ------new zhen-------166
 [LUA-print] actionBegin	2.0211729742587
 [LUA-print] time	2.0211729742587
@@ -144,8 +144,8 @@ MoveBy::update 0.099790
 ```
 
 
-
 ###Sequence:update源码解析
+
 
 `_split`表示两个action中间的分界线`[0,1]`
 
@@ -156,6 +156,7 @@ t表示action当前的时间比例。
 首先根据t以及`_split`确定执行哪一个action以及属于此action的时间比例`new_t`.
 
 1.第一次进入update，此时found=0，last = -1
+
 
 ```
 _actions[found]->startWithTarget(_target);
@@ -169,11 +170,13 @@ _actions[found]->startWithTarget(_target);
 
 3. 对于action1为CallFun这类ActionInstant，duration=0,这种情况，`_split = 0`,第一个found = 1，last = -1。
 action1直接开始start、update、stop：
+
 ```
 	_actions[0]->startWithTarget(_target);
 	_actions[0]->update(1.0f);
 	_actions[0]->stop();
 ```
+
 然后此帧继续执行action2的start和update。
 
 **注意，此帧会执行两个action的update，执行action1的update(1)，以及执行action2的正常的update**
