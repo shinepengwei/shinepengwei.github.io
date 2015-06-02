@@ -2,7 +2,7 @@
 layout: post
 title:  使用snapshot检测Lua中的内存泄露
 category: "游戏研发"
-tag:  "IOS"
+tag:  "Lua"
 ---
 
 
