@@ -10,6 +10,7 @@ tag:  "Cocos"
 实现的方式：每一段移动使用一个MoveBy，而多段移动的连接使用PerformWithDelay来控制开始时间。
 
 example：
+
 ```
 	hero:runAction(加速，1.0)
 	performWithDelay(hero:runAction(匀速1，2.0),1)
