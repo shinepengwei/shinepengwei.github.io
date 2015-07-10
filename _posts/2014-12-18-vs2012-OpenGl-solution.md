@@ -1,4 +1,8 @@
-在vs2012如何打开OpenGl（第五版）中的代码和工程
+---
+layout: post
+title:  在vs2012如何打开OpenGl（第五版）中的代码和工程
+category: "游戏研发"
+---
 
 1.按书上的步骤创建工程，添加include目录
 E:\doc\opengl\OpenGLsuper\freeglut-2.6.0\include
