@@ -20,7 +20,7 @@ nav:
   - text: 分类目录 
     url: /categories.html
   - text: wiki
-    url: http://shinepengwei.gitbooks.io/codingartdoc/content/
+    url: /myProject.html
   - text: 标签
     url: /tags.html
   - text: 文章归档

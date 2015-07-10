@@ -1,23 +1,15 @@
 ---
 layout: post
-title:  痕迹
+title:  wiki
 catygory: "编程"
 ---
 
-**使用Python完成Json解析器**
+给予gitbook，构建自己的知识体系。
 
-[JsonParser – Python json转换](/project-JsonParser.html)
+博客偏重于介绍经验，抽象概括。
 
-[Python作业问题——优化](python-work-problem.html)
+wiki中记录我平时所学习的，更偏重基础知识。
 
-<hr/>
+地址：[水风的wiki](http://shinepengwei.gitbooks.io/codingartdoc/content/)
 
-**用C#编写一个代码生成器，从给定的csv数据文件生成一份python代码，使数据可以用dict进行组织，外部代码可以通过访问这个dict实现直接访问csv的数据**
-
-[csv导表](project-csvToPython)
-
-<hr/>
-
-**本科SRT**
-
-[基于CBIR的商标检索](roject-cbir)
+github地址：https://github.com/shinepengwei/codingartdoc
