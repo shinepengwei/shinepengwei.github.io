@@ -1,13 +1,15 @@
-##Kunka
+## stormzhang的个人博客
 
-> 这只是另外一个 Jekyll 主题文件。
+基于jekyll的个人博客站点[http://stormzhang.com](http://stormzhang.com)，主题风格本着"simple is beautiful"的原则。
 
-![kunka blog theme](images/blog.jpg)
+## 关于我
 
-###使用方法
+Android开发者 + Ruby语言爱好者 + Google脑残粉，爱技术， 爱开源， 爱设计， 爱赚钱。互联网中毒症患者，Want to make a good app!
 
-* 把主题文件 clone 到你本地服务器，添加文章到 ```_posts``` 文件夹。
-* 修改 ```_config.yml```，里面有很多可以配置的选项。
-* 运行 ```jekyll server```，浏览器打开 http://localhost:4000 便可以看到新的主题。
+## 联系我
 
-更多的介绍，详见[Jekyll 博客主题 Kunka](http://www.zhanxin.info/jekyll/2013-08-11-jekyll-theme-kunka.html)。
+* Github: [stormzhang](https://github.com/stormzhang)
+
+* Weibo: [googdev](http://weibo.com/zhangqi8)
+
+* 知乎: [stormzhang](http://www.zhihu.com/people/stormzhang)
