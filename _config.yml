@@ -19,8 +19,8 @@ nav:
     url: /index.html
   - text: 分类目录 
     url: /categories.html
-  - text: 痕迹
-    url: /myProject.html
+  - text: wiki
+    url: http://shinepengwei.gitbooks.io/codingartdoc/content/
   - text: 标签
     url: /tags.html
   - text: 文章归档
@@ -42,12 +42,13 @@ author:
         <li>IT人</li>
         <li>互联网</li>
         <li><a href="http://www.njcoding.com">水风网络</a></li>
+        <p>目标：游戏全栈工程师</p>
         <p>技术永远是一种哲学和艺术。</p>
         <p>兴趣广泛，强烈喜欢网络游戏，并从事游戏研发。</p>
         <p>	对互联网相关的技术、运营、意识形态有着浓厚兴趣。</p>
         <p>技术兴趣广泛，技术能力一般，光而不深，或许因为学习能力不错，目前还没拉下。</p>
         <p>爱阅读，但不仅限于技术，更喜欢阅读一些社会科学、人文方面的书籍。</p>
-        <p>伪极客，七分书呆子，二分二流子，一分痛苦的哲学家</p>
+        
 
 #Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
 follow:

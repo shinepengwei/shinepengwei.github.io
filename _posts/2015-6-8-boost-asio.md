@@ -7,18 +7,20 @@ tag:  "Boost"
 
 ---
 
-
-
 Boost.Asio封装了一个io异步调用接口，可以用于实现网络通信操作。Asio提供了IO服务接口，I/O 服务抽象了操作系统的接口，允许第一时间进行异步数据处理，而 I/O 对象（通过IO服务创建，比如Socket）则用于初始化特定的操作。
 
 ###1 Asio库运行过程：
+
 ####同步操作
+
 ![enter image description here](http://www.boost.org/doc/libs/1_58_0/doc/html/boost_asio/sync_op.png)
+
 程序首先需要一个`io_service对象`，`io_service`代表着程序到操作系统IO服务的连接。`boost::asio::io_service io_service;`
 
 为了IO操作程序需要通过io_service创建一个IO对象，比如TCP socket：`boost::asio::ip::tcp::socket socket(io_service);`
 
 当执行异步连接操作时，执行以下过程：
+
 - 程序通过IO对象请求连接操作:`socket.connect(server_endpoint);`
 - IO对象转发请求到io_service
 - io_service通知操作系统执行网络连接操作。
@@ -35,6 +37,7 @@ Boost.Asio封装了一个io异步调用接口，可以用于实现网络通信�
 4. 程序做自己的事情（time pass）
 
 ![enter image description here](http://www.boost.org/doc/libs/1_58_0/doc/html/boost_asio/async_op2.png)
+
 5. 操作系统通知连接操作完成，将结果放入队列等待`io_service`取出。
 6. 程序会调用`io_service::run()`函数，这个函数会从结果队列中取出结果，然后解析给回调函数使用。
 
@@ -45,6 +48,7 @@ REF: http://www.boost.org/doc/libs/1_58_0/doc/html/boost_asio/overview/core/basi
 
 
 ###2 `run/run_one/poll/poll_one`的区别：
+
 `poll/poll_one`无论事件是否准备好，都马上返回，不会进行阻塞。区别在于如果多个事件准备好，poll_one每次只执行其中一个，而poll执行所有。
 
 `run/run_one`都是阻塞的，程序执行到这里就会等待。区别在于`run_one`等待一个事件准备好即可执行并返回，而`run`会等待所有的监控事件准备好，直至所有的事件准备好，然后返回。
@@ -54,6 +58,7 @@ REF: http://www.boost.org/doc/libs/1_58_0/doc/html/boost_asio/overview/core/basi
 
 
 ### 参考：
+
 http://zh.highscore.de/cpp/boost/
 http://www.boost.org/doc/libs/1_58_0/doc/html/boost_asio.html
 

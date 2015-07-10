@@ -61,6 +61,7 @@ RPCServerService：
 
 
 ####客户端发起RPC调用步骤：
+
 1.使用TcpClient的TcpConnection作为RpcChannel创建一个echo::EchoService::Stub。
 2.设置request信息，调用Stub的Echo函数。`service->Echo(NULL, &request, NULL, NULL);`
 3.调用RpcChannel(TcpConnection)的Callmethod函数。此函数中对函数信息和参数信息序列化，并发到服务端。
@@ -69,6 +70,7 @@ RPCServerService：
 6.EchoBackImplService的Echo函数调用echo::EchoService::Stub的Echo函数，开始Web客户端的RPC调用。
 
 ####服务端发起RPC调用步骤：
+
 TcpServer有一个Echo函数，这个函数基于所有的TcpConnection创建一个EchoService::Stub，然后调用它的Echo函数。
 
 
@@ -84,7 +86,7 @@ http://blog.csdn.net/kevinlynx/article/details/39379957
 目前，我只是用了functionId。放在网络传输字符串的第一个字节。
 
 
-ProtoBuf RPC总结：
+####ProtoBuf RPC总结：
 
 RPC客户端调用RPC服务端，重要的是实现一个RpcChannel以及它的一个CallMethod函数，此函数用于序列化函数和函数参数信息。
 

@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title:  GLProgramState && GLProgram &&GLProgramCache && GLStateCache
+title: GLProgram使用不当导致的内存泄漏
 category: "游戏研发"
 
 ---
@@ -37,6 +37,7 @@ glProgramState有一个GLProgramCache保存所有的GLProgram，key为一个stri
 创建多个entity，他们共用一个state，发生错误。
 
 读setGLProgram的源代码发现，使用GLProgramCache中相同的GLProgram创建state时获得的是相同的state。
+
 ```
 	void Node::setGLProgram(GLProgram *glProgram)
 	{

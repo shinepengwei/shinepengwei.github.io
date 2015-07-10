@@ -16,10 +16,12 @@ tag:  "IOS"
 当删除了这些spriteFrame和texture之后，在后面如果使用spriteFrame创建sprite，就会创建失败。
 
 使用cocos默认的memory warning处理方式有以下问题：
+
 1. 删除一些与加载了而后面需要使用的spriteFrame和texture，造成BUG。
 2. 两个spriteFrame对应相同的texture，其中一个使用了，一个没使用，这时候texture无法remove，只能remove那个没使用的spriteFrame信息，其实释放的内存可以忽略。
 
 一个好的memory warning处理方式应该有一些部分：
+
 - 一个unUsed的spriteFrame如果它对应的texture无法被remove，那么它不应该被remove，（因为对内存基本没有影响）
 - 当使用spriteFrame创建一个sprite的时候，应该去判断这个spriteFrame是否在cache中，如果不存在，还需要载入内存后创建。（可以写一个接口，cc.Sprite:createOrReloadWithSpriteFrame()）
 
