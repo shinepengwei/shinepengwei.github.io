@@ -1,9 +1,5 @@
----
-layout: post
-title:  Cocos中的Action机制
-category: "游戏研发"
-tag:  "Cocos"
----
+
+
 
 在action中，update是最重要的函数，此函数接受一个百分比参数，它表示动作的完成进度。update根据这个百分比将目标对象（可能是一个CCSprite对象，也可能是别的什么）做出相应的调整。
 笔者经过统计发现，只有2种函数调用过update，一个是step，另一个就是update本身。在第一种情况中，step通过update来更新动作的表现，在第二种情况中，这多半是一个包含了其它动作的复杂动作（比如CCActionEase类系）。
